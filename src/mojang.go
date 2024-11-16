@@ -41,7 +41,7 @@ type DecodedTextures struct {
 
 // GetMinecraftProfile returns the textures of a Minecraft player from Mojang.
 func GetMinecraftProfile(uuid string) (*MinecraftProfile, error) {
-	req, err := http.NewRequest("GET", fmt.Sprintf("https://sessionserver.mojang.com/session/minecraft/profile/%s", uuid), nil)
+	req, err := http.NewRequest("GET", fmt.Sprintf("https://auth.ardien.ru/session/minecraft/profile/%s", uuid), nil)
 
 	if err != nil {
 		return nil, err
